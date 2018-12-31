@@ -1,0 +1,344 @@
+
+/*------------------------------------------------------------------
+    Glitch
+-------------------------------------------------------------------*/
+
+.glitch {
+  color: black;
+  font-size: 100px;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(11px, 9999px, 96px, 0);
+  }
+  5% {
+    clip: rect(25px, 9999px, 33px, 0);
+  }
+  10% {
+    clip: rect(24px, 9999px, 78px, 0);
+  }
+  15% {
+    clip: rect(11px, 9999px, 62px, 0);
+  }
+  20% {
+    clip: rect(61px, 9999px, 10px, 0);
+  }
+  25% {
+    clip: rect(36px, 9999px, 72px, 0);
+  }
+  30% {
+    clip: rect(9px, 9999px, 93px, 0);
+  }
+  35% {
+    clip: rect(7px, 9999px, 35px, 0);
+  }
+  40% {
+    clip: rect(14px, 9999px, 39px, 0);
+  }
+  45% {
+    clip: rect(48px, 9999px, 41px, 0);
+  }
+  50% {
+    clip: rect(72px, 9999px, 99px, 0);
+  }
+  55% {
+    clip: rect(69px, 9999px, 72px, 0);
+  }
+  60% {
+    clip: rect(50px, 9999px, 91px, 0);
+  }
+  65% {
+    clip: rect(68px, 9999px, 16px, 0);
+  }
+  70% {
+    clip: rect(34px, 9999px, 41px, 0);
+  }
+  75% {
+    clip: rect(85px, 9999px, 89px, 0);
+  }
+  80% {
+    clip: rect(36px, 9999px, 15px, 0);
+  }
+  85% {
+    clip: rect(59px, 9999px, 89px, 0);
+  }
+  90% {
+    clip: rect(58px, 9999px, 80px, 0);
+  }
+  95% {
+    clip: rect(64px, 9999px, 97px, 0);
+  }
+  100% {
+    clip: rect(61px, 9999px, 24px, 0);
+  }
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: black;
+  background: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(35px, 9999px, 14px, 0);
+  }
+  5% {
+    clip: rect(83px, 9999px, 89px, 0);
+  }
+  10% {
+    clip: rect(92px, 9999px, 51px, 0);
+  }
+  15% {
+    clip: rect(48px, 9999px, 39px, 0);
+  }
+  20% {
+    clip: rect(73px, 9999px, 76px, 0);
+  }
+  25% {
+    clip: rect(69px, 9999px, 62px, 0);
+  }
+  30% {
+    clip: rect(38px, 9999px, 91px, 0);
+  }
+  35% {
+    clip: rect(75px, 9999px, 40px, 0);
+  }
+  40% {
+    clip: rect(21px, 9999px, 32px, 0);
+  }
+  45% {
+    clip: rect(50px, 9999px, 25px, 0);
+  }
+  50% {
+    clip: rect(6px, 9999px, 76px, 0);
+  }
+  55% {
+    clip: rect(49px, 9999px, 19px, 0);
+  }
+  60% {
+    clip: rect(58px, 9999px, 34px, 0);
+  }
+  65% {
+    clip: rect(83px, 9999px, 53px, 0);
+  }
+  70% {
+    clip: rect(92px, 9999px, 65px, 0);
+  }
+  75% {
+    clip: rect(94px, 9999px, 8px, 0);
+  }
+  80% {
+    clip: rect(48px, 9999px, 49px, 0);
+  }
+  85% {
+    clip: rect(28px, 9999px, 69px, 0);
+  }
+  90% {
+    clip: rect(62px, 9999px, 19px, 0);
+  }
+  95% {
+    clip: rect(90px, 9999px, 32px, 0);
+  }
+  100% {
+    clip: rect(50px, 9999px, 88px, 0);
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: black;
+  background: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+/*------------------------------------------------------------------
+    Rotate
+-------------------------------------------------------------------*/
+.gly-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+
+/*------------------------------------------------------------------
+Default theme  Stylesheet
+-------------------------------------------------------------------*/
+
+
+::selection {
+    background: #F26721;
+    color: #FFF;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #F26721; /* Firefox */
+    color: #FFF;
+    text-shadow: none;
+}
+
+::-webkit-selection {
+    background: #F26721; /* Safari */
+    color: #FFF;
+    text-shadow: none;
+}
+
+a,
+.menuzord .menuzord-menu>li.active>a,
+.menuzord .menuzord-menu>li.active>a>i,
+.menuzord .menuzord-menu>li:hover>a,
+.menuzord .menuzord-menu>li:hover>a>i,
+.portfolio-with-title .portfolio-title h4 a:hover,
+.f-link:hover,
+#footer .f-list li a:hover,
+.featured-item.border-box:hover .icon i,
+.post-single .post-cat li a:hover,
+.post-single .post-desk h4 a:hover,
+.post-single .post-desk a.author:hover,
+.post-list .post-single .post-cat li a,
+.portfolio-description a:hover,
+.portfolio-title a:hover,
+.post-sub-title,
+.team-member .s-link a:hover,
+.t-s-link a:hover,
+.price-col.feature h1,
+.widget-category li a:hover,
+.widget-comments li a:hover,
+.blog-classic .blog-post h4 a:hover,
+.post-meta li a:hover,
+.widget-latest-post .w-desk a:hover,
+.comments-list .comment-author a:hover,
+.comments-list .comment-item-data a:hover ,
+.product-title h5 a:hover,
+.comments-list .comment-info a:hover,
+.portfolio-with-title.blog-m .portfolio-title .date a:hover,
+.comments-list .comment-info .comment-author a:hover,
+.icon-tabs .nav-pills>li>a:hover,
+.icon-tabs .nav-pills>li.active>a,
+.icon-tabs .nav-pills>li.active>a:focus,
+.icon-tabs .nav-pills>li.active>a:hover,
+.cd-nav .cd-primary-nav li.selected a,
+.no-touch .cd-nav .cd-primary-nav a:hover,
+.intro-portfolio a:hover{
+    color: #F26721 ;
+}
+
+.theme-color,
+.massive-progress.progress-theme-color .progress-bar,
+.massive-progress.progress-theme-color .progress-bar > span
+{
+    color: #F26721 !important;
+}
+
+.theme-bg,
+.massive-progress.progress-theme-color .progress-bar,
+.massive-progress-alt.progress-theme-color .progress-bar,
+.ei-slider-thumbs li.ei-slider-element
+{
+    background: #F26721 !important;
+}
+
+.btn-theme-border-color,
+.widget-social-link a:hover,
+.widget-tags a:hover {
+    border:1px solid #F26721 ;
+}
+
+.nav-border-bottom .menuzord .menuzord-menu>li.active>a,
+.nav-border-bottom .menuzord .menuzord-menu>li:hover>a,
+.icon-tabs .nav-pills>li>a:hover,
+.icon-tabs .nav-pills>li.active>a,
+.icon-tabs .nav-pills>li.active>a:focus,
+.icon-tabs .nav-pills>li.active>a:hover {
+    border-bottom:1px solid #F26721;
+}
+
+.nav-border-box .menuzord-menu > li.active > a,
+.nav-border-box .menuzord-menu > li:hover > a,
+.btn-theme-border-color:hover,
+.price-col.feature .p-btn:hover,
+.side-social-link a:hover{
+    border:1px solid #F26721;
+}
+
+.nav-boxed-color .menuzord-menu > li.active > a,
+.nav-boxed-color .menuzord-menu > li:hover > a,
+.accordion.time-line > dt > a:hover:after,
+.accordion.time-line > dt > a.active:after,
+.accordion.time-line > dt > a.active:hover:after,
+.toggle.time-line > dt > a:hover:after,
+.toggle.time-line > dt > a.active:after,
+.toggle.time-line > dt > a.active:hover:after,
+.btn-dark-solid:hover,
+.btn-dark-solid:focus,
+.btn-theme-color ,
+.btn-theme-border-color:hover,
+.btn-light-solid:hover,
+.feature-border-box:hover .icon,
+.price-col.feature .p-btn:hover,
+.side-social-link a:hover,
+.widget-social-link a:hover,
+.widget-tags a:hover,
+.sale-label,
+.stock .status,
+#tb-scroll-to-top:hover{
+    background: #F26721 ;
+}
+
+
+.menuzord .menuzord-menu ul.dropdown li:hover>a,
+.menuzord-menu>li>.megamenu .megamenu-row li:hover>a {
+    color: #fff;
+}
